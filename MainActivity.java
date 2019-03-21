@@ -18,6 +18,8 @@ public class MainActivity extends AppCompatActivity
 {
 
     // Storage Permissions
+    // this is needed if we want to store the network data we
+    // collect on the device itself. It is NOT essential, merely a convenience.
     private static final int REQUEST_EXTERNAL_STORAGE = 1;
     private static String[] PERMISSIONS_STORAGE = {
             Manifest.permission.READ_EXTERNAL_STORAGE,
@@ -43,9 +45,10 @@ public class MainActivity extends AppCompatActivity
          startService(serviceIntent);
          return;
 
-        // if outside emulator, just start the service -- no need to handle all the
+         // this will vary depending on whether you want the app to have a UI or not.
+        // if no UI is necessary, just start the service -- no need to handle all the
         // filenames and button clicks
-        // for an emulator, this file just needs to have this current method with the 2 commented lines
+        // if UI is necessary, uncomment the lines below
 
 //        this.verifyStoragePermissions(this);
 //        final Button startRecordingButton = findViewById(R.id.startRecording);

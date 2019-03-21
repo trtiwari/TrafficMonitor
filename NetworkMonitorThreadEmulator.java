@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 
 
 /**
- * Created by root on 1/31/18.
+ * Created by Trishita Tiwari on 1/31/18.
  */
 
 public class NetworkMonitorThreadEmulator extends Thread {
@@ -134,7 +134,6 @@ public class NetworkMonitorThreadEmulator extends Thread {
             );
             dataOutPutStream.printf(outputData);
             Log.d("loop",outputData);
-//            Log.d("loop2",Long.toString(TrafficStats.getUidRxBytes(this.uid))+Long.toString(TrafficStats.getUidTxBytes(this.uid)));
         }
     }
     class getMetaData extends Thread {
@@ -158,26 +157,3 @@ public class NetworkMonitorThreadEmulator extends Thread {
         }
     }
 }
-
-/*
-Nexus 6 API 23
- */
-
-/*
-deltaMobileRxBytes,
-deltaMobileRxPackets,
-deltaMobileTxBytes,
-deltaMobileTxPackets,
-deltaTotalRxBytes,
-deltaTotalRxPackets,
-deltaTotalTxBytes,
-deltaTotalTxPackets,
-mobileRxBytes,
-mobileTxBytes,
-mobileRxPackets,
-mobileTxPackets,
-totalRxBytes,
-totalTxBytes,
-totalRxPackets,
-totalTxPackets
- */
