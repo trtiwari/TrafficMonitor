@@ -23,6 +23,7 @@ public class TrafficMonitorService extends Service
     public int onStartCommand(Intent intent, int flags, int startId)
     {
         Log.d("onStartCommand()","starting service");
+        // change this to NetworkMonitorThreadRealDevice to enable UI mode
         NetworkMonitorThreadEmulator networkMonitorThreadEmulator = new NetworkMonitorThreadEmulator(getGoogleMapsUID());
         networkMonitorThreadEmulator.start();
         return START_STICKY;
